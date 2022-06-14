@@ -12,6 +12,7 @@ prodotto(nome,prezzo,codice)
   }
 
 utente(nome, mail, scadenza carta) -->
+
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -24,12 +25,12 @@ require_once __DIR__ . "/Food.php";
 require_once __DIR__ . "/Toy.php";
 require_once __DIR__ . "/Transport.php";
 
-$dogFood = new Food("Cibo per cani", "$4.99", "Italy");
-$catFood = new Food("Cibo per gatti", "$3.99", "Italy");
-$catToy = new Toy("Corda per gatti", "$2.99", "China");
-$dogBone = new Toy("Osso finto per cani", "$7.99", "Italy");
-$transporCage = new Transport("Cuccia da trasporto", "$39.99", "Germany");
-$transportBag = new Transport("Borsa per trasporto", "$19.99", "Germany");
+$dogFood = new Food("Cibo per cani", "$4.99", "Italy", "Cani", "13/11/2022");
+$catFood = new Food("Cibo per gatti", "$3.99", "Italy", "Gatti", "01/12/2022");
+$catToy = new Toy("Corda per gatti", "$2.99", "China", "Gatti", "sisal");
+$dogBone = new Toy("Osso finto per cani", "$7.99", "Italy", "Cani", "plastica");
+$transporCage = new Transport("Cuccia da trasporto", "$39.99", "Germany","medium", "Nero");
+$transportBag = new Transport("Borsa per trasporto", "$19.99", "Germany", "large", "blu");
 
 
 $Utente1 = new User("Michele", "Mikael@lao.it", "20/09/2023");
