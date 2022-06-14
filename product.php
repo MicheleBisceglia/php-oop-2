@@ -12,6 +12,8 @@ class Product {
   }
   //Funzione per stampare i prodotti nella pagina
   public function printProduct() {
-    return "$this->nome $this->prezzo made in: $this->made";
+    return "$this->nome
+    $this->prezzo euro;
+    made in: $this->made.";
   }
 }

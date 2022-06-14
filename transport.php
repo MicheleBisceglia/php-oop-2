@@ -10,6 +10,10 @@ class Transport extends Product {
     $this->color = $_color;
   }
   public function printProduct() {
-    return "$this->nome $this->prezzo made in: $this->made misura: $this->size colore: $this->color";
+    return "$this->nome; 
+    $this->prezzo euro; 
+    made in: $this->made; 
+    misura: $this->size; 
+    colore: $this->color.";
   }
 }

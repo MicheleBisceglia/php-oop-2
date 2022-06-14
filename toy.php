@@ -10,6 +10,10 @@ class Toy extends Product {
     $this->material = $_material; 
   }
   public function printProduct() {
-    return "$this->nome $this->prezzo made in: $this->made per: $this->type materiale: $this->material";
+    return "$this->nome;    
+    $this->prezzo euro;    
+    made in: $this->made;    
+    per: $this->type;     
+    materiale: $this->material.";  
   }
 }

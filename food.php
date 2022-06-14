@@ -10,7 +10,11 @@ class Food extends Product {
     $this->expiryDate = $_expiryDate;
   }
   public function printProduct() {
-    return "$this->nome $this->prezzo made in: $this->made per: $this->animal consumare entro il $this->expiryDate";
+    return "$this->nome; 
+    $this->prezzo euro; 
+    made in: $this->made; 
+    per: $this->animal; 
+    consumare entro il $this->expiryDate .";
   }
 }
 
