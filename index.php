@@ -17,18 +17,20 @@ require_once __DIR__ . "/food.php";
 require_once __DIR__ . "/toy.php";
 require_once __DIR__ . "/transport.php";
 
-$dogFood = new Food("Cibo per cani", "$4.99", "Italy", "Cani", "13/11/2022");
-$catFood = new Food("Cibo per gatti", "$3.99", "Italy", "Gatti", "01/12/2022");
-$catToy = new Toy("Corda per gatti", "$2.99", "China", "Gatti", "sisal");
-$dogBone = new Toy("Osso finto per cani", "$7.99", "Italy", "Cani", "plastica");
-$transporCage = new Transport("Cuccia da trasporto", "$39.99", "Germany","medium", "Nero");
-$transportBag = new Transport("Borsa per trasporto", "$19.99", "Germany", "large", "blu");
+//New product
+$dogFood = new Food("Cibo per cani", "4.99", "Italy", "Cani", "13/11/2022");
+$catFood = new Food("Cibo per gatti", "3.99", "Italy", "Gatti", "01/12/2022");
+$catToy = new Toy("Corda per gatti", "2.99", "China", "Gatti", "sisal");
+$dogBone = new Toy("Osso finto per cani", "7.99", "Italy", "Cani", "plastica");
+$transporCage = new Transport("Cuccia da trasporto", "39.99", "Germany","medium", "Nero");
+$transportBag = new Transport("Borsa per trasporto", "19.99", "Germany", "large", "blu");
 
+//New User
+$Michele = new User("Michele", "Mikael@lao.it", "20/09/2023", "true");
 
-$Utente1 = new User("Michele", "Mikael@lao.it", "20/09/2023");
-$Utente1->addToCart($dogFood);
-var_dump($Utente1)
-
+//Prodotti scelti dall'utente
+$Michele->addToCart($dogBone);
+$Michele->addToCart($catToy);
 ?>
 
 <!DOCTYPE html>
@@ -62,6 +64,15 @@ var_dump($Utente1)
       <?php echo $transportBag -> printProduct(); ?>
     </li>
   </ul>
+
+  <h2>Il tuo carrello</h2>
+  <ul>
+    <?php foreach($Michele->cart as $cartItem) { ?>
+      <li><?php echo $cartItem->printProduct(); ?></li>
+    <?php } ?>
+  </ul> 
+  <h3>Totale: $<?php echo $Michele->getTotalPrice(); ?></h3>
+  <h2></h2>
   
 </body>
 </html>

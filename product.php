@@ -10,6 +10,7 @@ class Product {
     $this->prezzo = $_prezzo;
     $this->made = $_made;
   }
+  //Funzione per stampare i prodotti nella pagina
   public function printProduct() {
     return "$this->nome $this->prezzo made in: $this->made";
   }
