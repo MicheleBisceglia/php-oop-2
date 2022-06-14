@@ -11,11 +11,11 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
 <?php
-require_once __DIR__ . "/product.php.php";
-require_once __DIR__ . "/user.php.php";
-require_once __DIR__ . "/food.php.php";
-require_once __DIR__ . "/toy.php.php";
-require_once __DIR__ . "/transport.php.php";
+require_once __DIR__ . "/product.php";
+require_once __DIR__ . "/user.php";
+require_once __DIR__ . "/food.php";
+require_once __DIR__ . "/toy.php";
+require_once __DIR__ . "/transport.php";
 
 $dogFood = new Food("Cibo per cani", "$4.99", "Italy", "Cani", "13/11/2022");
 $catFood = new Food("Cibo per gatti", "$3.99", "Italy", "Gatti", "01/12/2022");
