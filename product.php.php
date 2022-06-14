@@ -1,5 +1,5 @@
 <?php
-//Classe prodotti
+//Classe prodotti //principale
 class Product {
   public $nome;
   public $prezzo;

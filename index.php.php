@@ -3,15 +3,7 @@ I prodotti saranno oltre al cibo, anche giochi, cucce, etc.
 L'utente potrà sia comprare i prodotti senza registrarsi, oppure iscriversi e ricevere il 20% di sconto su 
 tutti i prodotti.
 Il pagamento avviene con la carta di credito, che non deve essere scaduta. 
-
-prodotto(nome,prezzo,codice) 
-  {
-    cibo
-    giochi
-    trasporto
-  }
-
-utente(nome, mail, scadenza carta) -->
+-->
 
 <?php
 ini_set('display_errors', 1);
@@ -19,11 +11,11 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
 <?php
-require_once __DIR__ . "/product.php";
-require_once __DIR__ . "/user.php";
-require_once __DIR__ . "/food.php";
-require_once __DIR__ . "/toy.php";
-require_once __DIR__ . "/transport.php";
+require_once __DIR__ . "/product.php.php";
+require_once __DIR__ . "/user.php.php";
+require_once __DIR__ . "/food.php.php";
+require_once __DIR__ . "/toy.php.php";
+require_once __DIR__ . "/transport.php.php";
 
 $dogFood = new Food("Cibo per cani", "$4.99", "Italy", "Cani", "13/11/2022");
 $catFood = new Food("Cibo per gatti", "$3.99", "Italy", "Gatti", "01/12/2022");

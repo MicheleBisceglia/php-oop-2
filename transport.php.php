@@ -1,5 +1,6 @@
+<!-- subclasses -->
 <?php
-require_once __DIR__ . "/product.php";
+require_once __DIR__ . "/product.php.php";
 
 //Trasporto-Sottoclasse di product
 class Transport extends Product {
