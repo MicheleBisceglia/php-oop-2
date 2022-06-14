@@ -20,13 +20,16 @@ error_reporting(E_ALL);
 <?php
 require_once __DIR__ . "/Product.php";
 require_once __DIR__ . "/User.php";
+require_once __DIR__ . "/Food.php";
+require_once __DIR__ . "/Toy.php";
+require_once __DIR__ . "/Transport.php";
 
-$dogFood = new Product("Cibo per cani", "$4.99", "Italy");
-$catFood = new Product("Cibo per gatti", "$3.99", "Italy");
-$catToy = new Product("Corda per gatti", "$2.99", "China");
-$dogBone = new Product("Osso finto per cani", "$7.99", "Italy");
-$transporCage = new Product("Cuccia da trasporto", "$39.99", "Germany");
-$transportBag = new Product("Borsa per trasporto", "$19.99", "Germany");
+$dogFood = new Food("Cibo per cani", "$4.99", "Italy");
+$catFood = new Food("Cibo per gatti", "$3.99", "Italy");
+$catToy = new Toy("Corda per gatti", "$2.99", "China");
+$dogBone = new Toy("Osso finto per cani", "$7.99", "Italy");
+$transporCage = new Transport("Cuccia da trasporto", "$39.99", "Germany");
+$transportBag = new Transport("Borsa per trasporto", "$19.99", "Germany");
 
 
 $Utente1 = new User("Michele", "Mikael@lao.it", "20/09/2023");
